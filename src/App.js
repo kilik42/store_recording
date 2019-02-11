@@ -13,11 +13,11 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-            <Navbar></Navbar>
-            <ProductList></ProductList>
-            <Details></Details>
-            <Cart></Cart>
-            <Default></Default>
+            <Navbar/>
+            <ProductList/>
+            <Details/>
+            <Cart/>
+            <Default/>
 
       </React.Fragment>
     );
