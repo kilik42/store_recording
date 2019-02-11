@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import Product from './'
+import Product from './Product';
 /**
  * Navbar
  */
