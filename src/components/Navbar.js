@@ -5,9 +5,9 @@ import logo from '../logo.svg';
 export class Navbar extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark px-sm-5">
+      <nav className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
 
-          {/*
+        {/*
           https://www.iconfinder.com/icons/1243689/call_phone_icon
           Creative Commons (Attribution 3.0 Unported);
           https://www.iconfinder.com/Makoto_msk */}
@@ -23,6 +23,12 @@ export class Navbar extends Component { // eslint-disable-line react/prefer-stat
                 </Link>
                </li>
           </ul>
+
+          <Link to='/cart' className="ml-auto">
+            <button>
+            <i className="fas fa-cart-plus"></i>
+            my cart </button>
+          </Link>
       </nav>
     );
   }
