@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../logo.svg';
+import styled from 'styled-components';
 
 export class Navbar extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -25,14 +26,27 @@ export class Navbar extends Component { // eslint-disable-line react/prefer-stat
           </ul>
 
           <Link to='/cart' className="ml-auto">
-            <button>
-            <i className="fas fa-cart-plus"></i>
-            my cart </button>
+            <ButtonContainer>
+              <span className="mr-2">
+                <i className="fas fa-cart-plus"></i>
+              </span>
+                my cart
+            </ButtonContainer>
           </Link>
       </nav>
     );
   }
 }
+
+const ButtonContainer = styled.button`
+  text-transform: captialize;
+  font-size:1.43rem;
+  background: transparent;
+  border: 0.05rem solid var(--lightBlue);
+  border-color:var(--lightBlue);
+  color:var(--lightBlue);
+  border-radius:0.5rem;
+`;
 
 
 export default Navbar;
