@@ -2,11 +2,11 @@ import React, { Component} from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../logo.svg';
 import styled from 'styled-components';
-
+import{ButtonContainer} from './Button';
 export class Navbar extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
+      <NavWrapper className="navbar navbar-expand-sm  navbar-dark px-sm-5">
 
         {/*
           https://www.iconfinder.com/icons/1243689/call_phone_icon
@@ -33,22 +33,20 @@ export class Navbar extends Component { // eslint-disable-line react/prefer-stat
                 my cart
             </ButtonContainer>
           </Link>
-      </nav>
+      </NavWrapper>
     );
   }
 }
 
-const ButtonContainer = styled.button`
-  text-transform: captialize;
-  font-size:1.43rem;
-  background: transparent;
-  border: 0.05rem solid var(--lightBlue);
-  border-color:var(--lightBlue);
-  color:var(--lightBlue);
-  border-radius:0.5rem;
-  padding: 0.2rem 0.5rem;
-  cursor: pointer;
-  margin: 0.2rem 0.5rem;
+
+const NavWrapper = styled.nav`
+     background: var(--mainBlue);
+     .nav-link{
+       color: var(--mainWhite)!important;
+       font-size: 1.3rem;
+       text-transform: capitalize !important;
+     }
+
 `;
 
 
