@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import Product from "./Product";
 import Title from './Title';
 import {storeProducts} from '../data';
+import {ProductConsumer} from '../context';
 /**
  * ProductList
  */
@@ -11,7 +12,8 @@ export class ProductList extends Component {
     products: storeProducts
   }
   render() {
-    console.log(this.state.products);
+
+
     return (
       //<Product/>
 
@@ -20,7 +22,15 @@ export class ProductList extends Component {
           <div className="container">
              <Title name="our" title="products"/>
             <div className="row">
+                <ProductConsumer >
 
+                {(value)=>{
+                    return value.products.map(product=>{
+                        return <Product product={product} />;
+                    })
+                }}
+
+                </ProductConsumer>
             </div>
           </div>
         </div>
